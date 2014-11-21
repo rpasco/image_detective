@@ -1,0 +1,32 @@
+<h1>Listing images</h1>
+
+<table id="images">
+  <thead>
+    <tr>
+      <th>TMS Id</th>
+      <th>Title</th>
+      <th>Image Type</th>
+      <th>Title Lang</th>
+      <th>Desc Lang</th>
+      <th>Img Lang</th>
+      <th>Main Title Lang</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @images.each do |image| %>
+      <tr>
+        <td><%= link_to image.tms_id, image.url %></td>
+        <td><%= image.title %></td>
+        <td><%= image.image_type %></td>
+        <td><%= image.title_lang %></td>
+        <td><%= image.desc_lang %></td>
+        <td><%= image.caption_lang %></td>
+        <td><%= image.main_title_lang %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
