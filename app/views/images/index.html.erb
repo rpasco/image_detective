@@ -16,7 +16,7 @@
   <tbody>
     <% @images.each do |image| %>
       <tr>
-        <td><%= link_to image.tms_id, image.url %></td>
+        <td><img src="<%= image.url %>" height="50%" width="50%"></img></td>
         <td><%= image.title %></td>
         <td><%= image.image_type %></td>
         <td><%= image.title_lang %></td>
